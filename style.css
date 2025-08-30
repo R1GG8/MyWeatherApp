@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+body {
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.card {
+    flex-basis: 470px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 0px 15px;
+    background: linear-gradient(180deg, #62b8f6 0%, #2c79c1 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    height: 230px;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.card-title {
+    font-size: 32px;
+}
+
+.card-title--temp {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.card-title--city {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.card-date {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card-search {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+} 
+
+.card-input {
+    color: #555;
+    padding: 10px 25px;
+    border-radius: 30px;
+    width: 100%;
+    background: #fff;
+    font-size: 18px;
+    height: 60px;
+}
+
+.card-btn {
+    border-radius: 50%;
+    width: 60px;
+    flex: 0 0 60px;
+    cursor: pointer;
+    background: #fff;
+    height: 60px;
+}
+
+.card-btn i {
+    transition: transform 0.1s;
+}
+
+.card-btn:hover i {
+    transform: scale(1.3);
+}
+
+.card-weather {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card-block img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 0px 20px;
+    max-width: 250px;
+    margin: 0px auto;
+}
+
+.card-col {
+    display: grid;
+    grid-template-columns: 20px 50px auto;
+    align-items: center;
+    text-align: left;
+    column-gap: 16px;
+}
+
+.card-col:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.card-info {
+    border-left: 1px solid #fff;
+    padding-left: 16px;
+}
+
+.card-col-info {
+    width: 20px;
+    flex: 0 0 20px;
+}
+
+.card.active .card-weather {
+    animation:show 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes show {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
